@@ -16,10 +16,19 @@
   <body>
     <div class="container">
       <div class="one">
-        <audio autoplay>
-         <source src="audio/audiohbd.mp3" type="audio/mpeg">
+        <audio id="myAudio">
+          <source src="audio/audiohbd.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
+
+        <script>
+         // Set a delay of 5 seconds (5000 milliseconds) before starting playback
+        setTimeout(function() {
+         var audio = document.getElementById("myAudio");
+        audio.play();
+        }, 5000);
+        </script>
+
         <h1 class="one">
           <span data-node-name="greeting">Hey</span>
           <span data-node-name="name">Lydia</span>
